@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>プロフィールカード</title>
+  <style>
+    .box{
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        padding:20px;
+        width:300px;
+        text-align: center;
+    }
+    .box img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+    .nav{
+        background-color: #333;
+        padding: 10px;
+        text-align: center;
+    }
+    .nav{
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    .nav a{
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 18px;
+    }
+    .nav a:hover{
+        color: yellow;
+    }
+  </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="#profile">プロフィール</a>
+        <a href="#works">作品</a>
+        <a href="#contact">お問い合わせ</a>
+    </div>
+    <div class="box" id="profile">
+        <img src="https://i.imgur.com/tSuDVMh.jpeg" alt="プロフィール画像">
+        <h2>Yukiの紹介</h2>
+        <p>フロントエンドエンジニアを目指しています</p>
+    </div>
+    <style>
+        body{
+            margin: 0;
+            padding-bottom: 100px;
+            font-family: "Arial", sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+        .works{
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+            justify-content: center;
+            background-color: #f9f9f9;
+            padding: 30px 0;
+        }
+        .card{
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+            transition: 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+        }
+        .card img{
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .card:hover{
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2)
+        }
+        @media (max-width: 600px){
+            .works{
+                flex-direction: column;
+                align-items: center;
+            }
+            .card{
+                width: 90%;
+            }
+            .box{
+                width: 90%;
+                margin: 0 auto;
+            }
+            .contact{
+                width: 90%;
+            }
+        }
+    </style>
+
+    <div class="works" id="works">
+        <div class="card">
+            <img src="https://via.placeholder.com/200x120" alt="作品1">
+            <h3>作品タイトル2</h3>
+            <p>別の作品説明です。</p>
+        </div>
+         <div class="card">
+            <img src="https://via.placeholder.com/200x120" alt="作品1">
+            <h3>作品タイトル2</h3>
+            <p>別の作品説明です。</p>
+        </div>
+         <div class="card">
+            <img src="https://via.placeholder.com/200x120" alt="作品1">
+            <h3>作品タイトル2</h3>
+            <p>別の作品説明です。</p>
+        </div>
+    </div>
+    <div class="contact"  id="contact">
+        <h2>お問い合わせ</h2>
+        <form>
+            <label>お名前</label><br>
+            <input type="text"><br><br>
+            <label>メッセージ</label><br>
+            <textarea rows="5"></textarea><br><br>
+
+            <button type="submit">送信</button>
+        </form>
+    </div>
+    <style>
+        .contact{
+            width: 300px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fafafa;
+        }
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        .contact button{
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .contact button:hover{
+            background-color: #555;
+        }
+        .box,.works,.contact{
+            margin-top: 40px;
+            padding-top: 20px;
+        }
+
+    </style>
+    <footer style="text-align: center; padding: 20px; background-color: #333; color: white;">
+        &copy; 2025 Yuki Portfolio
+    </footer>
+</body>
+</html>
